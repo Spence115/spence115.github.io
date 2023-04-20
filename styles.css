@@ -1,0 +1,169 @@
+/* main body */
+body {
+    height: 100vh;
+    background: url('images/main.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: white;
+}
+
+
+/* Ensures drop down expands directly below button */
+.nav-item {
+    position: relative;
+}
+
+/* Adds small space between buttons */
+.btn-secondary {
+    margin: 0px 5px;
+}
+
+
+/* Background image for homepage */
+.bgimage {
+    height: 100vh;
+    background: url('images/alaska.JPG');
+    background-size: cover;
+    position: relative;
+    color: black;
+}
+
+#bgimage .div {
+    color: black;
+}
+
+/* Text css above main image */
+.main_title {
+    font-size: 4.5rem;
+    color: black;
+}
+.main_desc {
+    font-size: 2rem;
+    color: black;
+}
+.main-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* about section */
+.imageAboutPage {
+    width: 100%;
+}
+#about .card {
+    height: 450px;
+}
+/* Adds a bottom margin for use on mobile to prevent collision with 'Experience' section */
+@media (max-width: 767px) {
+    #about .card {
+        margin-bottom: 300px;
+    }
+}
+
+/* Card text formatting */
+#experience .card {
+    height: 325px;
+}
+
+#education .card {
+    height: 325px;
+}
+/* Card background */
+.card-body {
+    background-color: #eeeeee;
+}
+
+/* Background formatting */
+.backgroundText.card {
+    height: 280px;
+    cursor: pointer;
+  }
+.backgroundIcon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
+.card-title {
+    text-align: center;
+}
+.card:hover .backgroundIcon {
+    color: #990000;
+}
+.backgroundText:hover {
+    border: 2px solid #990000;
+}
+
+/* Display background color black on navbar scroll */
+.navbarScroll.navbarDark {
+    background-color: black;
+}
+
+/* Icon styling */
+.social-icons {
+    font-size: 36px;
+    cursor: pointer;
+}
+.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover, .fa-github:hover {
+    color: #990000;
+}
+.fab {
+    color: #000000;
+}
+/* Footer styling */
+#footer {
+    background-color: #808080;
+    text-align: center;
+}
+
+/* Spacing on sections */
+#about, #services, #portfolio, #contact {
+    margin-top: 4rem;
+    padding-top: 4rem;
+}
+#contact {
+    padding-bottom: 4rem;
+}
+
+/* Error message formatting */
+.error {
+    font-weight: bold;
+    margin: 10px 0;
+    color: #D8000C;
+    background-color: #FFBABA;
+    font-style: italic;
+}
+
+/* Contact form map formatting */
+.map-wrapper {
+    max-width: 100%;
+    overflow: hidden;
+    color: red;
+    width: 500px;
+    height: 500px;
+}
+
+#embedmap-canvas {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+#embedmap-canvas iframe {
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+#embedmap-canvas img {
+    max-width: none!important;
+    background: none!important;
+    font-size: inherit;
+    font-weight: inherit;
+}
