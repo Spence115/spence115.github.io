@@ -6,11 +6,11 @@ window.onscroll = function() {
     var top = window.scrollY;
     if(top >= 100) {
         header.classList.add('navbarDark');
-        footer.classList.add('footerGray');
+        footer.classList.add('footerBlack');
     }
     else {
         header.classList.remove('navbarDark');
-        footer.classList.remove('footerGray');
+        footer.classList.remove('footerBlack');
     }
 }
 
