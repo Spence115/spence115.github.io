@@ -1,13 +1,16 @@
-// Add class navbarDark on navbar scroll
+// Adds navbar and footer background transitions
 const header = document.querySelector('.navbar');
+const footer = document.querySelector('.footer');
 
 window.onscroll = function() {
     var top = window.scrollY;
     if(top >= 100) {
         header.classList.add('navbarDark');
+        footer.classList.add('footerGray');
     }
     else {
         header.classList.remove('navbarDark');
+        footer.classList.remove('footerGray');
     }
 }
 
