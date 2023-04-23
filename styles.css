@@ -12,7 +12,7 @@ h1 {
 
 
 /* Adds small space between buttons */
-.btn-secondary {
+.btn-dark {
     margin: 0px 5px;
 }
 
@@ -55,15 +55,20 @@ h1 {
 .imageAboutPage {
     width: 100%;
 }
-#about .card {
-    height: 425px;
-    margin-bottom: 50px;
-}
+
 
 
 /* Card formatting */
+#about .card {
+    height: auto;
+}
+
 #experience .card, #education .card {
     height: 325px;
+}
+
+#EMKR {
+    overflow: scroll;
 }
 
 .card-body {
@@ -132,7 +137,7 @@ h1 {
 
 .navbarScroll {
     background-color: transparent;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.8s ease;
 }
 
 .navbarDark {
@@ -169,16 +174,18 @@ h1 {
 
 /* Icon styling */
 .social-icons {
-    font-size: 36px;
+    font-size: 24px;
     cursor: pointer;
 }
 
-.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover, .fa-github:hover {
+.fa-facebook:hover, .fa-instagram:hover, .fa-linkedin:hover, .fa-github:hover,
+.footerBlack .fa-facebook:hover, .footerBlack .fa-instagram:hover,
+.footerBlack .fa-linkedin:hover, .footerBlack .fa-github:hover {
     color: #990000;
 }
 
 .fab {
-    color: #000000;
+    color: black;
 }
 
 
@@ -192,11 +199,12 @@ footer {
 
 .footerScroll {
     background-color: transparent;
-    transition: background-color 0.5s ease;
-  }
+    transition: background-color 0.8s ease;
+}
 
-.footerGray {
-    background-color: #808080;
+.footerBlack, .footerBlack .fab {
+    background-color: black;
+    color: white;
 }
 
 
@@ -252,9 +260,6 @@ footer {
 
 /* Optimization for alternative resolutions */
 @media (max-width: 1400px) {
-    #about .card {
-        height: 450px;
-    }
 
     #projects .card {
         height: 400px;
@@ -264,9 +269,6 @@ footer {
 
 /* Optimization for alternative resolutions */
 @media (max-width: 1200px) {
-    #about .card {
-        height: 550px;
-    }
 
     #experience .card, #education .card {
         height: 400px;
@@ -304,9 +306,7 @@ footer {
 
 /* Optimization for small devices */
 @media (max-width: 767px) {
-    #about .card {
-        height: 650px;
-    }
+
     /* Changes main backgroud to black*/
     body {
         background: black;
@@ -326,9 +326,7 @@ footer {
 
 /* Optimization for very small devices and phones */
 @media (max-width: 524px) {
-    #about .card {
-        height: 1000px;
-    }
+
     /* Changes main backgroud to black*/
     body {
         background: black;
