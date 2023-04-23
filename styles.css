@@ -20,14 +20,13 @@ h1 {
 /* Background image for homepage */
 .bgimage {
     height: 100vh;
-    background: url('images/alaska.JPG');
+    background: url('images/lincolnCity.jpg');
     background-size: cover;
     position: relative;
-    color: black;
 }
 
-#bgimage .div {
-    color: black;
+#home .main_title, #home .main_desc {
+    color: white;
 }
 
 
@@ -77,6 +76,19 @@ h1 {
 
 
 /* Card icon coloring */
+#EMKR:hover .backgroundIcon {
+    color: blue;
+}
+#EMKR:hover {
+    border: 2px solid blue;
+}
+
+#AddEd:hover .backgroundIcon {
+    color: #7E4001;
+}
+#AddEd:hover {
+    border: 2px solid #7E4001;
+}
 
 #EECE:hover .backgroundIcon, #CSCap:hover .backgroundIcon {
     color: #990000;
@@ -92,32 +104,11 @@ h1 {
     border: 2px solid yellow;
 }
 
-#SRP:hover .backgroundIcon, #SCCap:hover .backgroundIcon {
+#SCCap:hover .backgroundIcon {
     color: green;
 }
-#SRP:hover, #SCCap:hover {
+#SCCap:hover {
     border: 2px solid green;
-}
-
-#pizza:hover .backgroundIcon {
-    color: orange;
-}
-#pizza:hover {
-    border: 2px solid orange;
-}
-
-#robot:hover .backgroundIcon {
-    color: blue;
-}
-#robot:hover {
-    border: 2px solid blue;
-}
-
-#EMKR:hover .backgroundIcon, #AddEd:hover .backgroundIcon {
-    color: #7E4001;
-}
-#EMKR:hover, #AddEd:hover {
-    border: 2px solid #7E4001;
 }
 
 
@@ -139,12 +130,21 @@ h1 {
     display: flex;
 }
 
-.navbarScroll.navbarDark {
+.navbarScroll {
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+}
+
+.navbarDark {
     background-color: black;
 }
 
+
+/* Ensures dropdown always expands in the right position */
 .dropdown-menu {
-    transform: translateX(calc(100% - 290px));
+    position: absolute;
+    left: -50%;
+    transform: translateX(-40%);
     min-width: 100%;
 }
 
@@ -183,9 +183,20 @@ h1 {
 
 
 /* Footer styling */
-#footer {
-    background-color: #808080;
+footer {
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footerScroll {
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+  }
+
+.footerGray {
+    background-color: #808080;
 }
 
 
@@ -245,15 +256,11 @@ h1 {
         height: 450px;
     }
 
-    /* Realigns dropdown */
-    .dropdown-menu {
-        transform: translateX(calc(100% - 295px));
-    }
-
     #projects .card {
         height: 400px;
     }
 }
+
 
 /* Optimization for alternative resolutions */
 @media (max-width: 1200px) {
@@ -270,6 +277,7 @@ h1 {
     }
 }
 
+
 /* Optimization for medium devices */
 @media (max-width: 991px) {
 
@@ -284,11 +292,6 @@ h1 {
         padding: 0.4rem 0.6rem;
     }
 
-    /* Realigns dropdown */
-    .dropdown-menu {
-        transform: translateX(calc(100% - 240px));
-    }
-
     #education .card, #experience .card {
         height: 250px;
     }
@@ -297,6 +300,7 @@ h1 {
         height: 550px;
     }
 }
+
 
 /* Optimization for small devices */
 @media (max-width: 767px) {
@@ -314,15 +318,11 @@ h1 {
         padding: 0.2rem 0.4rem;
     }
 
-    /* Realigns dropdown */
-    .dropdown-menu {
-        transform: translateX(calc(100% - 170px));
-    }
-
     #education .card {
         height: 300px;
     }
 }
+
 
 /* Optimization for very small devices and phones */
 @media (max-width: 524px) {
@@ -338,11 +338,6 @@ h1 {
     .navbar .btn, .dropdown-item {
         font-size: 6.5px;
         padding: 0.1rem 0.2rem;
-    }
-
-     /* Realigns dropdown */
-    .dropdown-menu {
-        transform: translateX(calc(100% - 108px));
     }
 
     #education .card, #experience .card {
