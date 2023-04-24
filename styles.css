@@ -57,7 +57,6 @@ h1 {
 }
 
 
-
 /* Card formatting */
 #about .card {
     height: auto;
@@ -65,6 +64,11 @@ h1 {
 
 #experience .card, #education .card {
     height: 325px;
+}
+
+#community .card {
+    height: 100%;
+    width: 100%;
 }
 
 #EMKR {
@@ -116,10 +120,15 @@ h1 {
     border: 2px solid green;
 }
 
+#community:hover .backgroundIcon {
+    color: orange;
+}
+#community:hover {
+    border: 2px solid orange;
+}
 
 /* Background formatting */
 .backgroundText.card {
-    height: 280px;
     cursor: pointer;
 }
 
