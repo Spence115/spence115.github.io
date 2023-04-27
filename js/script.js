@@ -14,6 +14,30 @@ window.onscroll = function() {
     }
 }
 
+// Background video
+var bgvid = document.getElementById("bgvideo");
+
+// Adds background video fadeout/fadein
+bgvid.addEventListener("timeupdate", function() {
+    var currentTime = bgvid.currentTime;
+    var duration = bgvid.duration;
+    var fadeDuration = .7;
+
+    // Applies the 'fade' class to 'bgvideo' during last .7 sec
+    if (currentTime > duration - fadeDuration) {
+        bgvid.classList.add("fade");
+    // Removes the 'fade' class to 'bgvideo' during first .7 sec
+    } else if (currentTime < fadeDuration) {
+        bgvid.classList.remove("fade");
+    }
+});
+
+// Restarts video and resets 'currentTime'
+bgvid.addEventListener("ended", function() {
+    bgvid.currentTime = 0;
+    bgvid.play();
+});
+
 
 // Listener to check when "reset" button is pressed
 var resetButton = document.querySelector("input[type=reset]");
