@@ -23,7 +23,7 @@ h1 {
     height: 100vh;
     overflow: hidden;
     /* Sets the thumbnail as the background image. For smoother fade in/out feature */
-    background-image: url('images/grayKeyThumbnail.jpg');
+    background-image: url('images/grayKeyThumbnail.webp');
     /* Keeps background lined up with video frames */
     background-size: cover;
     background-position: center;
@@ -48,20 +48,19 @@ h1 {
     transition: opacity 1s ease-in-out;
 }
 
+/* Shadow for improved readability */
 #home .main_title, #home .main_desc {
     color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
 }
 
-
-/* Text css over main image */
+/* Text over main banner */
 .main_title {
     font-size: 4.5rem;
-    color: black;
 }
 
 .main_desc {
     font-size: 2rem;
-    color: black;
 }
 
 .main-text {
