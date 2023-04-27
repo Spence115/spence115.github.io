@@ -17,12 +17,35 @@ h1 {
 }
 
 
-/* Background image for homepage */
-.bgimage {
-    height: 100vh;
-    background: url('images/lincolnCity.jpg');
-    background-size: cover;
+/* Background video for homepage */
+.bgvideo {
     position: relative;
+    height: 100vh;
+    overflow: hidden;
+    /* Sets the thumbnail as the background image. For smoother fade in/out feature */
+    background-image: url('images/grayKeyThumbnail.jpg');
+    /* Keeps background lined up with video frames */
+    background-size: cover;
+    background-position: center;
+  }
+
+.bgvideo video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    /* Opacity 1 for when video is active */
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Opacity 0 for 'fading out' video. Used in script */
+.bgvideo video.fade {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 #home .main_title, #home .main_desc {
@@ -194,7 +217,7 @@ h1 {
 }
 
 .fab {
-    color: black;
+    color: white;
 }
 
 
