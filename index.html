@@ -13,6 +13,8 @@
         <link href="styles.css" rel="stylesheet">
         <!-- Link to favicon image -->
         <link href="images/favicon.png" rel="icon" type="image/x-icon">
+        <!-- Load JavaScript file after HTML finishes parsing but prior to DOMContentLoaded event -->
+        <script src="js/script.js" defer></script>
 
     </head>
 
@@ -407,9 +409,7 @@
                 </div>
             </div>
         </footer>
-
-        <!-- Load javascript -->
-        <script src="js/script.js"></script>
+        
 
     </body>
 </html>
